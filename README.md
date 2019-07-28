@@ -1,7 +1,12 @@
 # Analytica
 
+---
 ### Importer jQuery
+```
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+```
 
+---
 ### Ajouter dans le head
 ```
 <script type="text/javascript">
@@ -9,15 +14,18 @@
 </script>
 ```
 
+---
 ### Ajouter en fin de body
 ```
 <script src="###SITE###/js/stats.min.js"></script>
 ```
 
+---
 ### Récupérer GEOIP (GeoLite2-City.mmdb)
 
 [https://dev.maxmind.com/geoip/geoip2/geolite2/](https://dev.maxmind.com/geoip/geoip2/geolite2/)
 
+---
 ### Modifier le fichier stats.php
 Initialiser la bdd
 ```
@@ -31,6 +39,7 @@ $database = new medoo([
 ]);
 ```
 
+---
 ### Format BDD
 ```
 desc stats;
