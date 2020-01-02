@@ -72,3 +72,38 @@ desc stats;
 +------------------+--------------+------+-----+---------+----------------+
 23 rows in set (0.00 sec)
 ```
+
+---
+Creation des tables
+```
+CREATE DATABASE IF NOT EXISTS analytica_recettepateacrepe;
+
+CREATE TABLE IF NOT EXISTS `stats` (
+    `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+    `ident` bigint( 20 ) UNSIGNED NOT NULL,
+    `ip` varchar(255) NULL,
+    `url` varchar(255) NULL,
+    `referer` varchar(255) NULL,
+    `refererDomain` varchar(255) NULL,
+    `refererType` varchar(255) NOT NULL,
+    `loadHtml` int(11) NULL,
+    `loadDom` int(11) NULL,
+    `timeVisiteUrl` int(11) NULL,
+    `resolution` varchar(255) NOT NULL,
+    `resolutionWindow` varchar(255) NOT NULL,
+    `platform` varchar(255) NOT NULL,
+    `platformType` varchar(255) NOT NULL,
+    `browser` varchar(255) NOT NULL,
+    `isRobot` tinyint(1) NOT NULL,
+    `countryName` varchar(255) NOT NULL,
+    `departmentName` varchar(255) NOT NULL,
+    `cityName` varchar(255) NOT NULL,
+    `latitude` float NOT NULL,
+    `longitude` float NOT NULL,
+    `updated_at` datetime NOT NULL,
+    `created_at` datetime NOT NULL,
+
+    PRIMARY KEY(id)
+)
+CHARACTER SET utf8 COLLATE utf8_general_ci;
+```
